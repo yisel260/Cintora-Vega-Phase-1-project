@@ -1,7 +1,32 @@
 h1 {
-    color:blueviolet
+    color:rgb(79, 47, 109);
+    text-align: center;
+}
+
+#header{
+    background-color: darkcyan;
+    text-align: center;
 }
 
 body{
-    color:aqua
+    background-color: rgb(172, 231, 233);
+    text-align: center;
+}
+
+.forms-container {
+    background-color:rgb(9, 224, 196);
+    text-align: center;
+}
+
+#optionButtons {
+    background-color:rgb(49, 141, 141);
+    border: 5px outset rgb(0, 153, 255)(0, 102, 255);
+    background-color: lightblue;    
+    text-align: center;
+}
+
+#results {
+    background-color: rgb(172, 231, 233);
+    text-align: center;
+
 }

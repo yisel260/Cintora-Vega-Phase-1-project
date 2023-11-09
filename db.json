@@ -1,19 +1,43 @@
 {
-  "posts": [
+  "items": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "hammer",
+      "room": "hobby room",
+      "location": "Top drawer of gray dresser",
+      "category": "tools"
+   
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "Christmas decorations",
+      "room": "garage",
+      "location": "Plastic bin on top of table near wooden dresser",
+      "category": "holiday items"
+      
+    },
+    {
+      "id": 3,
+      "name": "cake decorating tips ",
+      "room": "kitchen",
+      "location": "Red, round, plastic container in pantry",
+      "category": "baking"
+      
+    },
+    {
+      "id": 4,
+      "name": "batteries ",
+      "room": "hobby room",
+      "location": "top drawer or puprple plastic dresser",
+      "category": "replacements"
+      
+    },
+    {
+      "id": 5,
+      "name": "cat food ",
+      "room": "office",
+      "location": " the  closet ",
+      "category": "pet items"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

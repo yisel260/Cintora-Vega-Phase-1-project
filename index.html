@@ -4,10 +4,73 @@
     <meta charset="utf-8" />
     <title> Where is it?</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"> </script>
   </head>
 
   <body>
-    <H1><center>Where is it?</center></H1>
-    <button>Search for an item</button>
-    <button>Store/add item</button>
+  <div id="header">
+    <H1>Where is it?</H1>
+  </div>
+
+  <div id="banners">
+    <h2>Search for and Item </h2>
+  </div><br>
+
+  
+    <div class="forms-container">
+
+
+    <form id="search-by-name"> 
+      <label  for="name"> Search by item name:</label>
+      <input type="text" id="name" name = "name"> 
+      <input type="submit" value="search" class = "button">
+   </form><br>
+
+   
+   <form id="search-by-room"> 
+    <label  for="room"> Search by room:</label>
+    <input type="text" id="room" name = "room"> 
+    <input type="submit" value="search" class = "button" id ="roomSearch">
+   </form><br>
+   
+
+   <form id="search-by-category"> 
+    <label  for="category"> Search by category:</label>
+    <input type="text" id="category" name = "category"> 
+    <input type="submit" value="search" class = "button">
+   </form><br>
+
+  </div><br>
+
+  <div id="banners">
+    <h2>Store/Add and item </h2>
+  </div><br>
+
+  <div class="forms-container">
+
+    <form id="store-item"> 
+      <label for="name"> Item name:</label>
+      <input type="text" id="item-name" name = "item-name"> <br><br>
+
+      <label for="room"> Room:</label>
+      <input type="text" id="item-room" name = "item-room"> <br><br>
+
+      <label for="location"> Location description:</label>
+      <input type="text" id="location" name = "location"> <br><br>
+
+      
+      <label for="item-category"> Category:</label>
+      <input type="text" id="item-category" name = "item-category"><br> <br>
+
+      <input type="submit" value="submit" class = "button" id="submitItem">
+     </form><br> 
+
+  </div><br>
+  <div id="banners">
+    <h3> Click on an item to display item information </h3>
+  </div><br>
+
+  <div id="results"> </div>
+  <div id="informationTable"> </div>
   </body>
+ 

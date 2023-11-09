@@ -1,5 +1,5 @@
 {
-  "example": [
+  "items": [
     {
       "id": 1,
       "name": "hammer",
@@ -29,7 +29,7 @@
       "name": "batteries ",
       "room": "hobby room",
       "location": "top drawer or puprple plastic dresser",
-      "category": "baking"
+      "category": "replacements"
       
     },
     {
