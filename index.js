@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function (){
           })
     }
 
-    let itemContainer = document.querySelector('#results');
-
-
+   let itemContainer = document.querySelector('#results');
    function renderObjects(item){
     console.log("renderObjects called");
     let p = document.createElement('p')
@@ -35,38 +33,34 @@ document.addEventListener('DOMContentLoaded', function (){
     p.addEventListener('click', function (event) {
         const pClicked = event.target;
         displayinformation(item)
-
     })
    }
 
    function displayinformation(item){
-    let informationTable = document.querySelector('#informationTable').value 
-    informationTable.innertext = `${item}`
+    let informationDisplay = document.querySelector('#information-display')
+    //let information = document.createElement('table')
+    informationDisplay.innerHTML = `
+        <table style="width:50%">
+         <tr>
+           <td>Name</td>
+           <td>${item.name}</td>
+         </tr>
+         <tr>
+          <td> Room</td>
+          <td>${item.room}</td>
+         </tr>
+         <tr>
+          <td> Location </td>
+          <td>${item.location}</td>
+         </tr>
+         <tr>
+         <td> Category</td>
+         <td>${item.category}</td>
+         </tr>
+        </table>
+    
+    `
    }
-
-
-   <table style="width:100%">
-  <tr>
-    <th>itemname</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-
-
-
-
 
 
 })
