@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "batteries ",
+      "name": "batteries",
       "room": "hobby room",
       "location": "top drawer or puprple plastic dresser",
       "category": "replacements"
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "name": "cat food ",
+      "name": "cat food",
       "room": "office",
       "location": " the  closet ",
       "category": "pet items"

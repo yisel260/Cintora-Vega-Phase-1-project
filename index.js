@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', function (){
 
+
     const searchName = document.getElementById("search-by-name")
     searchName.addEventListener('submit', function (event){
       event.preventDefault()
+      itemContainer.innerText =""
+      informationDisplay.innerText =""
       let name = document.querySelector('#name').value.toLowerCase()
-    
-      console.log(name)
       handleSearchByName (name)
     })
 
     const searchRoom = document.getElementById("search-by-room")
     searchRoom.addEventListener('submit', function (event){
       event.preventDefault()
+      informationDisplay.innerText =""
+      itemContainer.innerText =""
       let room = document.querySelector('#room').value.toLowerCase()
       handleSearchByRoom (room)
     })
@@ -19,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function (){
     const searchCategory = document.getElementById("search-by-category")
     searchCategory.addEventListener('submit', function (event){
       event.preventDefault()
+      itemContainer.innerText =""
+    informationDisplay.innerText =""
       let category = document.querySelector('#category').value.toLowerCase()
       handleSearchByCategory (category)
     })
@@ -48,6 +53,18 @@ document.addEventListener('DOMContentLoaded', function (){
           })
     }
 
+    function handleSearchByCategory(category){
+        fetch('http://localhost:3000/items')
+        .then(res => res.json())
+       .then(itemsInfo => { 
+        for (const item of itemsInfo) {
+             if(item.category === category ){
+            renderObjects(item)
+             }
+        } 
+          })
+    }
+
    let itemContainer = document.querySelector('#results');
    function renderObjects(item){
     let p = document.createElement('p')
@@ -59,9 +76,8 @@ document.addEventListener('DOMContentLoaded', function (){
         displayinformation(item)
     })
    }
-
+   let informationDisplay = document.querySelector('#information-display')
    function displayinformation(item){
-    let informationDisplay = document.querySelector('#information-display')
     informationDisplay.innerHTML = `
         <table style="width:50%">
          <tr>
