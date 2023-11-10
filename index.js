@@ -101,4 +101,48 @@ document.addEventListener('DOMContentLoaded', function (){
     `
    }
 
+
+   //Add new item to data list 
+
+const addItemButton = document.getElementById("store-item")
+addItemButton.addEventListener('submit', function(event){
+  event.preventDefault()
+  handleSubmit()
 })
+
+
+function handleSubmit() {
+ 
+    const itemName = document.querySelector('#item-name').value;
+    const itemRoom = document.querySelector('#item-room').value;
+    const itemLocation = document.querySelector('#item-location').value;
+    const itemCategory= document.querySelector('#item-category').value;
+    const newItem = {
+      name : itemName,
+      room: itemRoom,
+      location: itemLocation,
+      category: itemCategory,
+    };
+  
+   fetch('http://localhost:3000/items', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+       },
+     body: JSON.stringify(newItem)
+    })
+    .then (renderObjects(newItem))
+      
+    .catch(error => {
+       console.error('Error:', error);
+      });
+    }
+
+    
+
+
+
+
+})
+
+
