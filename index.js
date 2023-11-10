@@ -1,13 +1,26 @@
 document.addEventListener('DOMContentLoaded', function (){
 
     const searchName = document.getElementById("search-by-name")
-
-    console.log(searchName)
-
     searchName.addEventListener('submit', function (event){
       event.preventDefault()
-      let name = document.querySelector('#name').value
+      let name = document.querySelector('#name').value.toLowerCase()
+    
+      console.log(name)
       handleSearchByName (name)
+    })
+
+    const searchRoom = document.getElementById("search-by-room")
+    searchRoom.addEventListener('submit', function (event){
+      event.preventDefault()
+      let room = document.querySelector('#room').value.toLowerCase()
+      handleSearchByRoom (room)
+    })
+
+    const searchCategory = document.getElementById("search-by-category")
+    searchCategory.addEventListener('submit', function (event){
+      event.preventDefault()
+      let category = document.querySelector('#category').value.toLowerCase()
+      handleSearchByCategory (category)
     })
 
     function handleSearchByName(name){
@@ -23,9 +36,20 @@ document.addEventListener('DOMContentLoaded', function (){
           })
     }
 
+    function handleSearchByRoom(room){
+        fetch('http://localhost:3000/items')
+        .then(res => res.json())
+       .then(itemsInfo => { 
+        for (const item of itemsInfo) {
+             if(item.room === room ){
+            renderObjects(item)
+             }
+        } 
+          })
+    }
+
    let itemContainer = document.querySelector('#results');
    function renderObjects(item){
-    console.log("renderObjects called");
     let p = document.createElement('p')
     p.innerText = item.name
     itemContainer.appendChild(p)
@@ -38,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function (){
 
    function displayinformation(item){
     let informationDisplay = document.querySelector('#information-display')
-    //let information = document.createElement('table')
     informationDisplay.innerHTML = `
         <table style="width:50%">
          <tr>
@@ -61,6 +84,5 @@ document.addEventListener('DOMContentLoaded', function (){
     
     `
    }
-
 
 })
