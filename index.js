@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function (){
     searchCategory.addEventListener('submit', function (event){
       event.preventDefault()
       itemContainer.innerText =""
-    informationDisplay.innerText =""
+      informationDisplay.innerText =""
       let category = document.querySelector('#category').value.toLowerCase()
       handleSearchByCategory (category)
     })
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function (){
             console.log(item);
             renderObjects(item)
              }
+    
         } 
           })
     }

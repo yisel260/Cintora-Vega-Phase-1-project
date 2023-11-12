@@ -41,13 +41,6 @@
       "location": "Tool box, top drawer of gray dresser",
       "category": "tools",
       "id": 6
-    },
-    {
-      "name": "screwdriver",
-      "room": "hobby room",
-      "location": "Tool box, top drawer of gray dresser",
-      "category": "tools",
-      "id": 7
     }
   ]
 }
