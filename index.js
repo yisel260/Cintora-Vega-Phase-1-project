@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', function (){
 
+    function resetResults (){
+      itemContainer.innerText =""
+      informationDisplay.innerText =""
+    }
+
 
     const searchName = document.getElementById("search-by-name")
     searchName.addEventListener('submit', function (event){
       event.preventDefault()
-      itemContainer.innerText =""
-      informationDisplay.innerText =""
+      resetResults()
       let name = document.querySelector('#name').value.toLowerCase()
       handleSearchByName (name)
     })
@@ -13,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function (){
     const searchRoom = document.getElementById("search-by-room")
     searchRoom.addEventListener('submit', function (event){
       event.preventDefault()
-      informationDisplay.innerText =""
-      itemContainer.innerText =""
+      resetResults()
       let room = document.querySelector('#room').value.toLowerCase()
       handleSearchByRoom (room)
     })
@@ -22,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function (){
     const searchCategory = document.getElementById("search-by-category")
     searchCategory.addEventListener('submit', function (event){
       event.preventDefault()
-      itemContainer.innerText =""
-      informationDisplay.innerText =""
+      resetResults()
       let category = document.querySelector('#category').value.toLowerCase()
       handleSearchByCategory (category)
     })
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function (){
              }
         } 
           })
+    
     }
 
     function handleSearchByRoom(room){
@@ -70,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
 
    let itemContainer = document.querySelector('#results');
+   
    function renderObjects(item){
     let p = document.createElement('p')
     p.innerText = item.name
