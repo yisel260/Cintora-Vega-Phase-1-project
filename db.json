@@ -41,6 +41,20 @@
       "location": "Tool box, top drawer of gray dresser",
       "category": "tools",
       "id": 6
+    },
+    {
+      "name": "screwdriver",
+      "room": "",
+      "location": "",
+      "category": "",
+      "id": 7
+    },
+    {
+      "name": "wine opener ",
+      "room": "kitchen",
+      "location": "top drawer of kitchen island ",
+      "category": "cookware",
+      "id": 8
     }
   ]
 }
