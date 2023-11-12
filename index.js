@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function (){
       itemContainer.innerText =""
       informationDisplay.innerText =""
       let name = document.querySelector('#name').value.toLowerCase()
+
       handleSearchByName (name)
     })
 
@@ -34,10 +35,8 @@ document.addEventListener('DOMContentLoaded', function (){
        .then(itemsInfo => { 
         for (const item of itemsInfo) {
              if(item.name === name ){
-            console.log(item);
             renderObjects(item)
              }
-    
         } 
           })
     }
