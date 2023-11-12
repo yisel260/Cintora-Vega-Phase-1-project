@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function (){
       itemContainer.innerText =""
       informationDisplay.innerText =""
       let name = document.querySelector('#name').value.toLowerCase()
-
       handleSearchByName (name)
     })
 
@@ -28,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function (){
       let category = document.querySelector('#category').value.toLowerCase()
       handleSearchByCategory (category)
     })
+
+    const notFound = document.querySelector("#notFoundAnswer")
+    let informationDisplay = document.querySelector('#information-display')
 
     function handleSearchByName(name){
         fetch('http://localhost:3000/items')
@@ -62,8 +64,10 @@ document.addEventListener('DOMContentLoaded', function (){
             renderObjects(item)
              }
         } 
-          })
-    }
+   
+    }) 
+}
+
 
    let itemContainer = document.querySelector('#results');
    function renderObjects(item){
@@ -75,8 +79,7 @@ document.addEventListener('DOMContentLoaded', function (){
         const pClicked = event.target;
         displayinformation(item)
     })
-   }
-   let informationDisplay = document.querySelector('#information-display')
+   
    function displayinformation(item){
     informationDisplay.innerHTML = `
         <table style="width:50%">
@@ -130,19 +133,12 @@ function handleSubmit() {
         'Content-Type': 'application/json'
        },
      body: JSON.stringify(newItem)
-    })
-    .then (renderObjects(newItem))
+      })
+        .then (renderObjects(newItem))
       
-    .catch(error => {
-       console.error('Error:', error);
-      });
-    }
-
-    
-
-
-
-
-})
-
-
+        .catch(error => {
+         console.error('Error:', error);
+        });
+      }
+     }
+    })
