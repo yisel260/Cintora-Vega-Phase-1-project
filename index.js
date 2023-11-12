@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function (){
 
-    function resetResults (){
-      itemContainer.innerText =""
+    function resetResults(){
+        itemContainer.innerText =""
       informationDisplay.innerText =""
     }
-
 
     const searchName = document.getElementById("search-by-name")
     searchName.addEventListener('submit', function (event){
       event.preventDefault()
-      resetResults()
+      resetResults();
       let name = document.querySelector('#name').value.toLowerCase()
+      console.log(name)
       handleSearchByName (name)
     })
 
@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function (){
       handleSearchByCategory (category)
     })
 
-    const notFound = document.querySelector("#notFoundAnswer")
-    let informationDisplay = document.querySelector('#information-display')
+
 
     function handleSearchByName(name){
         fetch('http://localhost:3000/items')
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function (){
              }
         } 
           })
-    
     }
 
     function handleSearchByRoom(room){
@@ -67,13 +65,10 @@ document.addEventListener('DOMContentLoaded', function (){
             renderObjects(item)
              }
         } 
-   
-    }) 
-}
-
+          })
+    }
 
    let itemContainer = document.querySelector('#results');
-   
    function renderObjects(item){
     let p = document.createElement('p')
     p.innerText = item.name
@@ -83,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function (){
         const pClicked = event.target;
         displayinformation(item)
     })
-   
+   }
+   let informationDisplay = document.querySelector('#information-display')
    function displayinformation(item){
     informationDisplay.innerHTML = `
         <table style="width:50%">
@@ -109,40 +105,43 @@ document.addEventListener('DOMContentLoaded', function (){
    }
 
 
-   //Add new item to data list 
+//    //Add new item to data list 
 
-const addItemButton = document.getElementById("store-item")
-addItemButton.addEventListener('submit', function(event){
-  event.preventDefault()
-  handleSubmit()
+// const addItemButton = document.getElementById("store-item")
+// addItemButton.addEventListener('submit', function(event){
+//   event.preventDefault()
+//   handleSubmit()
+// })
+
+
+// function handleSubmit() {
+ 
+//     const itemName = document.querySelector('#item-name').value;
+//     const itemRoom = document.querySelector('#item-room').value;
+//     const itemLocation = document.querySelector('#item-location').value;
+//     const itemCategory= document.querySelector('#item-category').value;
+//     const newItem = {
+//       name : itemName,
+//       room: itemRoom,
+//       location: itemLocation,
+//       category: itemCategory,
+//     };
+  
+//    fetch('http://localhost:3000/items', {
+//         method: 'POST',
+//         headers: {
+//         'Content-Type': 'application/json'
+//        },
+//      body: JSON.stringify(newItem)
+//     })
+//     .then (renderObjects(newItem))
+      
+//     .catch(error => {
+//        console.error('Error:', error);
+//       });
+//     }
+
+
 })
 
 
-function handleSubmit() {
- 
-    const itemName = document.querySelector('#item-name').value;
-    const itemRoom = document.querySelector('#item-room').value;
-    const itemLocation = document.querySelector('#item-location').value;
-    const itemCategory= document.querySelector('#item-category').value;
-    const newItem = {
-      name : itemName,
-      room: itemRoom,
-      location: itemLocation,
-      category: itemCategory,
-    };
-  
-   fetch('http://localhost:3000/items', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-       },
-     body: JSON.stringify(newItem)
-      })
-        .then (renderObjects(newItem))
-      
-        .catch(error => {
-         console.error('Error:', error);
-        });
-      }
-     }
-    })
