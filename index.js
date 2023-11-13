@@ -125,6 +125,7 @@ const addItemButton = document.getElementById("store-item")
  addItemButton.addEventListener('submit', function(event){
  event.preventDefault()
  console.log("button was pushed")
+  resetResults()
   handleSubmit()
  })
 
@@ -154,6 +155,8 @@ function handleSubmit() {
     .catch(error => {
        console.error('Error:', error);
       });
+
+      endResults()
     }
 
 

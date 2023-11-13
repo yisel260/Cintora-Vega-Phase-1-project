@@ -62,6 +62,41 @@
       "location": "middle drawer or tv stand",
       "category": "health",
       "id": 9
+    },
+    {
+      "name": "cat leash ",
+      "room": "living room",
+      "location": "left drawer of tv stand",
+      "category": "pet items",
+      "id": 10
+    },
+    {
+      "name": "wedding dress",
+      "room": "garage",
+      "location": "purple bin under corner table",
+      "category": "sentimental items",
+      "id": 11
+    },
+    {
+      "name": "rake",
+      "room": "garage",
+      "location": "hanging on wall ",
+      "category": "landscaping tools",
+      "id": 12
+    },
+    {
+      "name": "extra needles ",
+      "room": "hobby room",
+      "location": "gray dresser middle drawer purple plastic carrier",
+      "category": "sewing ",
+      "id": 13
+    },
+    {
+      "name": "extra needles",
+      "room": "hobby room",
+      "location": "purply carrier, middle drawer of gray dresser",
+      "category": "sewing",
+      "id": 14
     }
   ]
 }
