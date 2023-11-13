@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function (){
       event.preventDefault()
       resetResults();
       let name = document.querySelector('#name').value.toLowerCase()
-      console.log(name)
       handleSearchByName (name)
     })
 
@@ -41,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function (){
             renderObjects(item)
              }
         } 
+
+        endResults()
           })
     }
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function (){
             renderObjects(item)
              }
         } 
+        endResults()
           })
     }
 
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function (){
             renderObjects(item)
              }
         } 
+        endResults()
           })
     }
 
@@ -79,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function (){
         displayinformation(item)
     })
    }
+
+
    let informationDisplay = document.querySelector('#information-display')
    function displayinformation(item){
     informationDisplay.innerHTML = `
@@ -102,6 +107,14 @@ document.addEventListener('DOMContentLoaded', function (){
         </table>
     
     `
+   }
+
+
+   function endResults(){
+    let h4 = document.createElement("h4")
+    h4.innerText = "End of results. If your item is not listed try a different search."
+    itemContainer.appendChild(h4)
+    
    }
 
 //    //Add new item to data list 

@@ -48,6 +48,20 @@
       "location": "closet, clear bin with blue lid ",
       "category": "knitting ",
       "id": 7
+    },
+    {
+      "name": "first aid kit",
+      "room": "Living room",
+      "location": "middle drawer or tv stand",
+      "category": "health",
+      "id": 8
+    },
+    {
+      "name": "first aid kit",
+      "room": "Living room",
+      "location": "middle drawer or tv stand",
+      "category": "health",
+      "id": 9
     }
   ]
 }
