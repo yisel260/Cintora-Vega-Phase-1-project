@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function (){
     `
    }
 
-
 //    //Add new item to data list 
 
 const addItemButton = document.getElementById("store-item")

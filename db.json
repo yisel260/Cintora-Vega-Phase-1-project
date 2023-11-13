@@ -43,60 +43,11 @@
       "id": 6
     },
     {
-      "name": "screwdriver",
-      "room": "",
-      "location": "",
-      "category": "",
-      "id": 7
-    },
-    {
-      "name": "wine opener ",
-      "room": "kitchen",
-      "location": "top drawer of kitchen island ",
-      "category": "cookware",
-      "id": 8
-    },
-    {
-      "name": "is ",
-      "room": "this",
-      "location": "goin ",
-      "category": "worj",
-      "id": 9
-    },
-    {
-      "name": "is ",
-      "room": "this",
-      "location": "goin ",
-      "category": "worj",
-      "id": 10
-    },
-    {
-      "name": "is ",
-      "room": "this",
-      "location": "goin ",
-      "category": "worj",
-      "id": 11
-    },
-    {
-      "name": "wine opener ",
-      "room": "kitchen",
-      "location": "top drawer of kitchen island ",
-      "category": "cookware",
-      "id": 12
-    },
-    {
-      "name": "screwdriver",
+      "name": "yarn ",
       "room": "hobby room",
-      "location": "Tool box, top drawer of gray dresser",
-      "category": "tools",
-      "id": 13
-    },
-    {
-      "name": "wine opener ",
-      "room": "kitchen",
-      "location": "top drawer of kitchen island ",
-      "category": "tools",
-      "id": 14
+      "location": "closet, clear bin with blue lid ",
+      "category": "knitting ",
+      "id": 7
     }
   ]
 }
