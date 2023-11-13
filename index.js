@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function (){
     function resetResults(){
         itemContainer.innerText =""
       informationDisplay.innerText =""
+      endResultscontainer.innerText = ""
+    
     }
 
     const searchName = document.getElementById("search-by-name")
@@ -109,11 +111,11 @@ document.addEventListener('DOMContentLoaded', function (){
     `
    }
 
-
+   let endResultscontainer = document.querySelector("#endResults")
    function endResults(){
     let h4 = document.createElement("h4")
     h4.innerText = "End of results. If your item is not listed try a different search."
-    itemContainer.appendChild(h4)
+    endResultscontainer.appendChild(h4)
     
    }
 
