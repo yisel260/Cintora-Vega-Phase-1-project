@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (){
 
     function resetResults(){
-        itemContainer.innerText =""
+      itemContainer.innerText =""
       informationDisplay.innerText =""
       endResultscontainer.innerText = ""
     
@@ -32,17 +32,17 @@ document.addEventListener('DOMContentLoaded', function (){
     })
 
 
-
     function handleSearchByName(name){
         fetch('http://localhost:3000/items')
         .then(res => res.json())
        .then(itemsInfo => { 
-        for (const item of itemsInfo) {
-             if(item.name === name ){
+        itemsInfo.forEach(item => {
+          if(item.name === name ){
             renderObjects(item)
-             }
-        } 
+          }
 
+          
+        });
         endResults()
           })
     }
@@ -50,27 +50,27 @@ document.addEventListener('DOMContentLoaded', function (){
     function handleSearchByRoom(room){
         fetch('http://localhost:3000/items')
         .then(res => res.json())
-       .then(itemsInfo => { 
-        for (const item of itemsInfo) {
-             if(item.room === room ){
+        .then(itemsInfo => { 
+        itemsInfo.forEach(item=>{
+          if(item.room === room){
             renderObjects(item)
-             }
         } 
-        endResults()
           })
-    }
+          endResults()
+    })
+  }
 
     function handleSearchByCategory(category){
         fetch('http://localhost:3000/items')
         .then(res => res.json())
        .then(itemsInfo => { 
-        for (const item of itemsInfo) {
-             if(item.category === category ){
+        itemsInfo.forEach(item=>{
+          if(item.category == category){
             renderObjects(item)
-             }
-        } 
+          }
+        })
         endResults()
-          })
+        })
     }
 
    let itemContainer = document.querySelector('#results');
@@ -111,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function (){
     `
    }
 
-   let endResultscontainer = document.querySelector("#endResults")
-   function endResults(){
+    let endResultscontainer = document.querySelector("#endResults")
+    
+    function endResults(){
     let h4 = document.createElement("h4")
     h4.innerText = "End of results. If your item is not listed try a different search."
     endResultscontainer.appendChild(h4)

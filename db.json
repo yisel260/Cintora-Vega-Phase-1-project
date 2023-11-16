@@ -97,6 +97,27 @@
       "location": "purply carrier, middle drawer of gray dresser",
       "category": "sewing",
       "id": 14
+    },
+    {
+      "name": "first aid kit",
+      "room": "hobby room",
+      "location": "Tool box, top drawer of gray dresser",
+      "category": "tools",
+      "id": 15
+    },
+    {
+      "name": "Grandpa's photo",
+      "room": "hobby room",
+      "location": "purple plastic clear bin in the closet",
+      "category": "sentimental items",
+      "id": 16
+    },
+    {
+      "name": "family photo",
+      "room": "hobby room",
+      "location": "in a clear plastic bin in the closet",
+      "category": "sentimental items",
+      "id": 17
     }
   ]
 }
