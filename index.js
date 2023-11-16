@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function (){
     searchName.addEventListener('submit', function (event){
       event.preventDefault()
       resetResults();
-      let name = document.querySelector('#name').value.toLowerCase()
+      let name = document.querySelector('#name').value.toLowerCase().trim()
       handleSearchByName (name)
     })
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function (){
     searchRoom.addEventListener('submit', function (event){
       event.preventDefault()
       resetResults()
-      let room = document.querySelector('#room').value.toLowerCase()
+      let room = document.querySelector('#room').value.toLowerCase().trim()
       handleSearchByRoom (room)
     })
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function (){
     searchCategory.addEventListener('submit', function (event){
       event.preventDefault()
       resetResults()
-      let category = document.querySelector('#category').value.toLowerCase()
+      let category = document.querySelector('#category').value.toLowerCase().trim()
       handleSearchByCategory (category)
     })
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function (){
 const addItemButton = document.getElementById("store-item")
  addItemButton.addEventListener('submit', function(event){
  event.preventDefault()
- console.log("button was pushed")
+ //console.log("button was pushed")
   resetResults()
   handleSubmit()
  })
@@ -159,7 +159,6 @@ function handleSubmit() {
 
       endResults()
     }
-
 
 })
 
